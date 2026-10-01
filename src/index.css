@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -34,7 +41,7 @@ body {
 }
 
 .logo span {
-  font-family: "Bodoni Moda", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -117,8 +124,8 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-  background-color: #fcebea;
-}
+   background-color: #fcebea;
+ }
 
 .hero-content {
   max-width: 550px;
@@ -131,8 +138,8 @@ body {
 }
 
 .hero h1 {
-  font-family: "Bodoni Moda", serif;
-  font-size: clamp(60px, 9vw, 120px);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(65px, 9vw, 120px);
   line-height: 0.95;
   font-weight: 700;
   letter-spacing: 2px;
@@ -552,4 +559,141 @@ body {
     grid-template-columns: 1fr;
   }
 
+}
+
+.hero-image {
+  width: 50%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  animation: heroFade 1s ease-in-out;
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 4px;
+  border-radius: 20px;
+  background: linear-gradient(
+    120deg,
+    #b8860b,
+    #f5d77a,
+    #fff3b0,
+    #d4af37,
+    #b8860b
+  );
+  background-size: 300% 300%;
+  animation: goldShimmer 4s linear infinite;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.hero {
+  position: relative;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(253, 232, 232, 0.95) 0%,
+      rgba(253, 232, 232, 0.85) 50%,
+      rgba(253, 232, 232, 0.6) 100%
+    ),
+    url("./assets/hero-bg.jpg") center / cover no-repeat;
+  border-radius: 20px;
+}
+
+/* ================================
+   SERVICES PAGE
+================================ */
+
+.services-page {
+  background-color: #fffaf7;
+  min-height: 100vh;
+}
+
+.services-header {
+  text-align: center;
+  padding: 80px 6% 50px;
+}
+
+.services-header > p:first-child {
+  color: #b88a2e;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.services-header h1 {
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(50px, 7vw, 85px);
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+.services-intro {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #777;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.services-list-section {
+  padding: 20px 6% 90px;
+}
+
+.services-list-section .services-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.home-service-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }

@@ -5,17 +5,22 @@ function ServicePriceCard({ category, services }) {
       <h3>{category}</h3>
 
       <div className="service-list">
-        {services.map((service) => (
-          <div className="service-item" key={service.name}>
 
+        {services.map((service) => (
+          <div
+            className="service-item"
+            key={service.name}
+          >
             <span>{service.name}</span>
 
             <span>
-              {service.price ? `R${service.price}` : "Price TBC"}
+              {service.price
+                ? `R${service.price}`
+                : "Price TBC"}
             </span>
-
           </div>
         ))}
+
       </div>
 
     </div>
