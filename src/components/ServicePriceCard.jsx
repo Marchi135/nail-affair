@@ -1,29 +1,29 @@
-function ServicePriceCard({ category, services }) {
+function ServicePriceCard({ category, icon, image, services }) {
   return (
-    <div className="service-price-card">
+    <article className="service-price-card">
 
-      <h3>{category}</h3>
+      <div className="service-card-top">
+        <span className="service-card-icon">{icon}</span>
 
-      <div className="service-list">
-
-        {services.map((service) => (
-          <div
-            className="service-item"
-            key={service.name}
-          >
-            <span>{service.name}</span>
-
-            <span>
-              {service.price
-                ? `R${service.price}`
-                : "Price TBC"}
-            </span>
-          </div>
-        ))}
-
+        <img
+          src={image}
+          alt={`${category} service`}
+          className="service-card-image"
+        />
       </div>
 
-    </div>
+      <h2>{category}</h2>
+
+      <div className="service-price-list">
+        {services.map((service) => (
+          <div className="service-price-row" key={service.name}>
+            <span>{service.name}</span>
+            <span>{service.price}</span>
+          </div>
+        ))}
+      </div>
+
+    </article>
   );
 }
 

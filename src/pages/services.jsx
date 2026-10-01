@@ -1,29 +1,32 @@
-import ServicePriceCard from "../components/ServicePriceCard";
 import services from "../data/services";
+import ServicePriceCard from "../components/ServicePriceCard";
 
 function Services() {
   return (
     <main className="services-page">
 
-      <section className="services-header">
-        <p>NAIL AFFAIR</p>
+      <section className="services-page-header">
+        <div>
+          <p className="section-label">NAIL AFFAIR</p>
 
-        <h1>Our Services</h1>
+          <h1>Our Services</h1>
 
-        <p className="services-intro">
-          Discover our range of beauty services designed to
-          make you feel confident, beautiful and cared for.
-        </p>
+          <p>
+            Premium beauty services tailored to you.
+          </p>
+        </div>
       </section>
 
-      <section className="services-list-section">
+      <section className="services-content">
 
-        <div className="services-grid">
-          {services.map((serviceCategory) => (
+        <div className="services-page-grid">
+          {services.map((category) => (
             <ServicePriceCard
-              key={serviceCategory.category}
-              category={serviceCategory.category}
-              services={serviceCategory.services}
+              key={category.category}
+              category={category.category}
+              icon={category.icon}
+              image={category.image}
+              services={category.services}
             />
           ))}
         </div>

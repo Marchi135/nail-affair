@@ -697,3 +697,215 @@ body {
   text-decoration: none;
   color: inherit;
 }
+
+/* =========================
+   SERVICES PAGE
+========================= */
+
+.services-page {
+  min-height: 100vh;
+  background: #fffaf7;
+}
+
+.services-page-header {
+  padding: 55px 7%;
+  background: #fde7e9;
+}
+
+.services-page-header h1 {
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(38px, 5vw, 58px);
+  margin: 5px 0;
+  color: #333333;
+}
+
+.services-page-header p {
+  color: #555;
+}
+
+.section-label {
+  color: #b88a2e !important;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.services-content {
+  padding: 45px 7% 80px;
+}
+
+.services-page-grid {
+  max-width: 1050px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+
+/* SERVICE CARD */
+
+.service-price-card {
+  background: #ffffff;
+  border: 1px solid #eadbd5;
+  border-radius: 10px;
+  padding: 20px;
+
+  transition: 0.3s ease;
+}
+
+.service-price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(70, 50, 40, 0.08);
+}
+
+
+/* IMAGE + ICON */
+
+.service-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.service-card-icon {
+  font-size: 34px;
+}
+
+.service-card-image {
+  width: 48%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+
+/* CATEGORY TITLE */
+
+.service-price-card h2 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 25px;
+  margin: 8px 0 15px;
+  color: #333333;
+}
+
+
+/* PRICES */
+
+.service-price-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-price-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 5px 0;
+
+  font-size: 14px;
+  color: #444;
+}
+
+.service-price-row span:last-child {
+  font-weight: 600;
+  color: #333333;
+  white-space: nowrap;
+}
+
+/* BOOK APPOINTMENT */
+
+.book-appointment {
+  padding: 40px 6% 70px;
+  background-color: #fffaf7;
+}
+
+.book-appointment-box {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #fcebea, #f9d9d5);
+  border: 1px solid #f0dcd8;
+  border-radius: 20px;
+}
+
+.book-appointment-box h2 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.book-appointment-box p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .book-appointment-box h2 {
+    font-size: 26px;
+  }
+}
+
+/* CONTACT STRIP */
+
+.contact-strip {
+  padding: 20px 6% 60px;
+  background-color: #fffaf7;
+}
+
+.contact-strip-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px;
+  text-decoration: none;
+  color: #333;
+  background-color: #ffffff;
+  border: 1px solid #f0dcd8;
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.contact-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-icon {
+  font-size: 26px;
+}
+
+.contact-item small {
+  display: block;
+  color: #b88a2e;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.contact-item p {
+  font-size: 15px;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .contact-strip-grid {
+    grid-template-columns: 1fr;
+  }
+}

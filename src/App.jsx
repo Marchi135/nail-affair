@@ -1,19 +1,9 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import HomeServices from "./components/HomeServices";
+import BookAppointment from "./components/BookAppointment";
+import ContactStrip from "./components/ContactStrip";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
 
@@ -22,6 +12,8 @@ function Home() {
     <>
       <Hero />
       <HomeServices />
+      <BookAppointment />
+      <ContactStrip />
     </>
   );
 }
