@@ -21,6 +21,7 @@ function Services() {
           <ServicePriceCard
             key={serviceCategory.category}
             category={serviceCategory.category}
+             image={serviceCategory.image}
             services={serviceCategory.services}
           />
         ))}

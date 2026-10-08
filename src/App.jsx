@@ -5,7 +5,9 @@ import HomeServices from "./components/HomeServices";
 import BookAppointment from "./components/BookAppointment";
 import ContactStrip from "./components/ContactStrip";
 import Services from "./components/Services";
+import Booking from "./pages/Booking";
 import Footer from "./components/Footer";
+
 
 function Home() {
   return (
@@ -27,6 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/booking" element={<Booking />} />
         </Routes>
       </main>
 

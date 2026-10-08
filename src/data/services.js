@@ -9,11 +9,11 @@ const services = [
     icon: "💅",
     image: nailsImage,
     services: [
-      { name: "Acrylic Full Set", price: "R300" },
-      { name: "Acrylic Fill", price: "R200" },
-      { name: "Gel Nails", price: "R250" },
-      { name: "BIAB", price: "R300" },
-      { name: "Nail Art", price: "R50+" },
+      { name: "Acrylic Nails", price: "R150" },
+      { name: "Re-Fill", price: "R120" },
+      { name: "Gel Nails", price: "R150" },
+      { name: "Polygel Nails", price: "R170" },
+      { name: "Nail Art", price: "R10+" },
     ],
   },
 
@@ -22,11 +22,11 @@ const services = [
     icon: "🦶",
     image: toesImage,
     services: [
-      { name: "Acrylic Toes", price: "R180" },
-      { name: "Gel Toes", price: "R150" },
+      { name: "Acrylic Toes", price: "R150" },
+      { name: "Gel Toes", price: "R120" },
       { name: "Toe Nail Polish", price: "R100" },
-      { name: "French Toes", price: "R200" },
-      { name: "Nail Art (Toes)", price: "R50+" },
+      { name: "French Toes", price: "R150" },
+      { name: "Nail Art (Toes)", price: "R10+" },
     ],
   },
 
@@ -37,8 +37,9 @@ const services = [
     services: [
       { name: "Classic Lashes", price: "R200" },
       { name: "Hybrid Lashes", price: "R250" },
-      { name: "Volume Lashes", price: "R300" },
+      { name: "Cateye cluster lashes", price: "R150" },
       { name: "Lash Fill", price: "R150" },
+      {name: "Cluster Lashes", price: "R120" },
     ],
   },
 
@@ -47,8 +48,8 @@ const services = [
     icon: "✨",
     image: microbladingImage,
     services: [
-      { name: "Microblading", price: "R600" },
-      { name: "Touch Up", price: "R500" },
+      { name: "Microblading", price: "R800" },
+      { name: "Touch Up", price: "R400" },
     ],
   },
 ];
