@@ -1,27 +1,54 @@
 
 import { useState } from "react";
+import services from "../data/services";
+
+const availableServices = services.flatMap((category) =>
+  category.services.map((service) => ({
+    id: `${category.category}-${service.name}`,
+    name: service.name,
+    category: category.category,
+    price: service.price,
+  }))
+);
 
 function BookingForm({ selectedDate, selectedTime, onBack }) {
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
     email: "",
-    service: "",
+    services: [],
     notes: "",
   });
+  const selectedService = availableServices.find(
+  (service) => service.id === formData.service
+);
 
   const [confirmed, setConfirmed] = useState(false);
 
-  const services = [
-    "Acrylic Nails",
-    "Gel Nails",
-    "Acrylic Toes",
-    "Gel Toes",
-    "Classic Lashes",
-    "Hybrid Lashes",
-    "Volume Lashes",
-    "Microblading",
-  ];
+ const handleServiceChange = (serviceId) => {
+  setFormData((previous) => {
+    const alreadySelected = previous.services.includes(serviceId);
+
+    return {
+      ...previous,
+      services: alreadySelected
+        ? previous.services.filter((id) => id !== serviceId)
+        : [...previous.services, serviceId],
+    };
+  });
+};
+
+const selectedServices = availableServices.filter((service) =>
+  formData.services.includes(service.id)
+);
+
+const totalPrice = selectedServices.reduce((total, service) => {
+  const price = Number(
+    String(service.price).replace(/[^\d.]/g, "")
+  );
+
+  return total + (Number.isFinite(price) ? price : 0);
+}, 0);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -33,9 +60,15 @@ function BookingForm({ selectedDate, selectedTime, onBack }) {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    setConfirmed(true);
-  };
+  event.preventDefault();
+
+  if (formData.services.length === 0) {
+    alert("Please select at least one service.");
+    return;
+  }
+
+  setConfirmed(true);
+};
 
   if (confirmed) {
     return (
@@ -124,22 +157,23 @@ function BookingForm({ selectedDate, selectedTime, onBack }) {
         </div>
 
         <div className="form-group">
-          <label htmlFor="service">Select Service *</label>
-          <select
-            id="service"
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Choose a service</option>
-            {services.map((service) => (
-              <option key={service} value={service}>
-                {service}
-              </option>
-            ))}
-          </select>
-        </div>
+  <label>Select Your Services *</label>
+
+  <div className="booking-services-list">
+    {availableServices.map((service) => (
+      <label key={service.id} className="booking-service-option">
+        <input
+          type="checkbox"
+          checked={formData.services.includes(service.id)}
+          onChange={() => handleServiceChange(service.id)}
+        />
+
+        <span>{service.name}</span>
+        <strong>{service.price}</strong>
+      </label>
+    ))}
+  </div>
+</div>
 
         <div className="form-group">
           <label htmlFor="notes">Special Requests</label>
@@ -154,10 +188,22 @@ function BookingForm({ selectedDate, selectedTime, onBack }) {
         </div>
 
         <div className="booking-review">
-          <h3>Appointment Summary</h3>
-          <p><strong>Date:</strong> {selectedDate}</p>
-          <p><strong>Time:</strong> {selectedTime}</p>
-        </div>
+  <h3>Appointment Summary</h3>
+
+  {selectedServices.map((service) => (
+    <p key={service.id}>
+      {service.name}: {service.price}
+    </p>
+  ))}
+
+  <p>
+    <strong>Estimated Total: R{totalPrice}</strong>
+  </p>
+
+  <p><strong>Date:</strong> {selectedDate}</p>
+  <p><strong>Time:</strong> {selectedTime}</p>
+</div>
+
 
         <div className="booking-form-actions">
           <button

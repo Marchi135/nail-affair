@@ -1346,3 +1346,34 @@ a.contact-item:hover {
     width: 100%;
   }
 }
+.booking-services-list {
+  display: grid;
+  gap: 12px;
+}
+
+.booking-service-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #fffaf7;
+  border: 1px solid #eadbd5;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.booking-service-option input {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: #d4af37;
+}
+
+.booking-service-option span {
+  flex: 1;
+}
+
+.booking-service-option strong {
+  color: #a77d27;
+  white-space: nowrap;
+}

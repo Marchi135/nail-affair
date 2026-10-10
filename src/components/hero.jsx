@@ -21,17 +21,16 @@ function Hero() {
 
   return (
     <section className="hero" id="home">
-
       <div className="hero-content">
         <p className="hero-subtitle">WELCOME TO</p>
 
         <h1>Nail Affair</h1>
-b          
+
         <h2>Luxury Nails. Beautiful You.</h2>
 
         <p className="hero-text">
-          Pamper yourself with premium nail, lash and beauty services.
-          Look good, feel beautiful and leave feeling confident.
+          Pamper yourself with premium nail, lash and beauty services. Look
+          good, feel beautiful and leave feeling confident.
         </p>
 
         <a href="#booking" className="book-btn">
@@ -40,12 +39,8 @@ b
       </div>
 
       <div className="hero-image">
-        <img
-          src={heroImages[currentImage]}
-          alt="Nail Affair beauty services"
-        />
+        <img src={heroImages[currentImage]} alt="Nail Affair beauty services" />
       </div>
-
     </section>
   );
 }
