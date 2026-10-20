@@ -1572,3 +1572,504 @@ a.contact-item:hover {
   color: #b42318;
   font-size: 14px;
 }
+
+
+/* NAIL AFFAIR CONTACT PAGE */
+
+.contact-page {
+  min-height: 80vh;
+  padding: 70px 6%;
+  background: #fffaf7;
+}
+
+.contact-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px;
+}
+
+.contact-heading > p:first-child {
+  color: #a77d27;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.contact-heading h1 {
+  font-size: clamp(32px, 5vw, 50px);
+  color: #302b2a;
+  margin: 12px 0;
+}
+
+.contact-heading p {
+  color: #716966;
+  line-height: 1.7;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.contact-info h2,
+.contact-form-card h2 {
+  color: #302b2a;
+  margin-bottom: 22px;
+}
+
+.contact-info-card {
+  background: white;
+  padding: 22px;
+  border: 1px solid #eadbd5;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.contact-info-card h3 {
+  color: #a77d27;
+  margin-bottom: 8px;
+}
+
+.contact-info-card p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.contact-info-card a {
+  color: #302b2a;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-info-card a:hover {
+  color: #a77d27;
+}
+
+.contact-form-card {
+  background: white;
+  border: 1px solid #eadbd5;
+  border-radius: 18px;
+  padding: 35px;
+}
+
+.contact-form-card > p {
+  color: #716966;
+  margin-bottom: 25px;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.contact-field label {
+  font-weight: 600;
+  color: #302b2a;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #eadbd5;
+  border-radius: 10px;
+  background: #fffaf7;
+  color: #302b2a;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
+}
+
+.contact-submit {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #d4af37;
+  color: #222;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  background: #c5a02b;
+}
+
+.contact-form-note {
+  margin-top: 14px;
+  color: #716966;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 45px 5%;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 22px;
+  }
+}
+
+/* MOBILE RESPONSIVENESS: NAVBAR AND HERO */
+
+@media (max-width: 600px) {
+  .navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 14px 12px;
+    box-sizing: border-box;
+  }
+
+  .hero {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    padding: 30px 18px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 8vw, 36px);
+    line-height: 1.15;
+    margin: 0 0 12px;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    flex: none;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  .hero p {
+    line-height: 1.6;
+  }
+}
+/* RESPONSIVE IMAGE FIX */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-image,
+.service-card-image {
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  object-fit: cover;
+}
+
+/* RESPONSIVE TEXT FIX */
+
+h1, h2, h3, p {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 56px);
+}
+
+h2 {
+  font-size: clamp(24px, 4vw, 40px);
+}
+
+
+/* ======================================
+   NAIL AFFAIR - STEP 4 BOOKING REVIEW
+====================================== */
+
+.booking-review-page {
+  width: min(100%, 850px);
+  margin: 0 auto;
+  padding: 30px 20px 70px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.booking-review-page *,
+.booking-confirmation * {
+  box-sizing: border-box;
+}
+
+/* PAGE HEADING */
+
+.booking-review-page .booking-step-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.booking-review-page .booking-step-heading h2 {
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.2;
+  color: #302830;
+  margin: 12px 0;
+}
+
+.booking-review-page .booking-step-heading p {
+  color: #756a70;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* REVIEW CARDS */
+
+.booking-review-page .review-card {
+  background: #ffffff;
+  border: 1px solid #eadcd8;
+  border-radius: 18px;
+  padding: 28px 30px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 28px rgba(64, 39, 48, 0.05);
+}
+
+/* CARD HEADINGS */
+
+.booking-review-page .review-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.booking-review-page .review-section-heading h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #302830;
+  margin: 0;
+}
+
+.booking-review-page .review-section-heading button {
+  background: transparent;
+  border: 1px solid #d5b579;
+  border-radius: 30px;
+  color: #a17b3d;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.booking-review-page .review-section-heading button:hover {
+  background: #fff4e6;
+}
+
+/* INFORMATION ROWS */
+
+.booking-review-page .review-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3e9e6;
+  font-size: 15px;
+}
+
+.booking-review-page .review-row span {
+  color: #74696d;
+  min-width: 0;
+}
+
+.booking-review-page .review-row strong {
+  color: #302830;
+  font-weight: 600;
+  text-align: right;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.booking-review-page .review-row:last-child {
+  border-bottom: none;
+}
+
+/* ESTIMATED TOTAL */
+
+.booking-review-page .review-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-top: 20px;
+  margin-top: 15px;
+  border-top: 1px solid #eadcd8;
+}
+
+.booking-review-page .review-total strong:first-child {
+  color: #302830;
+  font-size: 16px;
+}
+
+.booking-review-page .review-total strong:last-child {
+  color: #b18b4b;
+  font-size: 25px;
+}
+
+/* BUTTONS */
+
+.booking-review-page .booking-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.booking-review-page .booking-back-btn,
+.booking-review-page .book-btn {
+  padding: 15px 24px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.booking-review-page .booking-back-btn {
+  background: #ffffff;
+  color: #51434a;
+  border: 1px solid #d5b579;
+}
+
+.booking-review-page .book-btn {
+  background: #c38c9c;
+  color: #ffffff;
+  border: 1px solid #c38c9c;
+}
+
+.booking-review-page .book-btn:hover {
+  background: #ad7285;
+}
+
+/* CONFIRMATION PREVIEW */
+
+.booking-confirmation {
+  width: min(100% - 32px, 700px);
+  margin: 40px auto 70px;
+  padding: 45px 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #eadcd8;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(64, 39, 48, 0.05);
+}
+
+.booking-confirmation .confirmation-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f9e8ed;
+  color: #a76f83;
+  font-size: 32px;
+}
+
+.booking-confirmation h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  color: #302830;
+  margin-bottom: 18px;
+}
+
+.booking-confirmation p {
+  color: #756a70;
+  line-height: 1.7;
+}
+
+.booking-confirmation .booking-back-btn {
+  margin-top: 20px;
+  padding: 13px 24px;
+  border: 1px solid #d5b579;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #51434a;
+  cursor: pointer;
+}
+
+/* ======================================
+   MOBILE RESPONSIVENESS
+====================================== */
+
+@media (max-width: 600px) {
+  .booking-review-page {
+    padding: 20px 14px 45px;
+  }
+
+  .booking-review-page .booking-step-heading {
+    margin-bottom: 25px;
+  }
+
+  .booking-review-page .booking-step-heading h2 {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .booking-review-page .review-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  .booking-review-page .review-section-heading h3 {
+    font-size: 16px;
+  }
+
+  .booking-review-page .review-section-heading button {
+    padding: 7px 13px;
+  }
+
+  .booking-review-page .review-row {
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .booking-review-page .review-total strong:last-child {
+    font-size: 21px;
+  }
+
+  .booking-review-page .booking-navigation {
+    flex-direction: column;
+  }
+
+  .booking-review-page .booking-back-btn,
+  .booking-review-page .book-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .booking-confirmation {
+    padding: 30px 18px;
+  }
+}
+

@@ -4,6 +4,7 @@ import CustomerDetails from "../components/CustomerDetails";
 import Calendar from "../components/Calendar";
 import TimeSlots from "../components/TimeSlots";
 import ServiceSelection from "../components/ServiceSelection";
+import BookingReview from "../components/BookingReview";
 
 import services from "../data/services";
 
@@ -137,24 +138,20 @@ function Booking() {
       )}
 
       {/* STEP 4: Booking review */}
-      {step === 4 && (
-        <section className="booking-placeholder">
-          <h2>Review Your Booking</h2>
-
-          <p>Thank you, {customer.fullName}!</p>
-
-          <p>Your booking details are ready for review.</p>
-
-          <button
-            type="button"
-            className="booking-back-btn"
-            onClick={() => setStep(3)}
-          >
-            Edit Your Details
-          </button>
-        </section>
-      )}
-    </main>
+      
+{step === 4 && (
+  <BookingReview
+    selectedServices={selectedServices}
+    availableServices={availableServices}
+    selectedDate={selectedDate}
+    selectedTime={selectedTime}
+    customer={customer}
+    onBack={() => setStep(3)}
+    onEditServices={() => setStep(1)}
+    onEditDateTime={() => setStep(2)}
+  />
+)}
+  </main>
   );
 }
 

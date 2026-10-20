@@ -6,6 +6,7 @@ import BookAppointment from "./components/BookAppointment";
 import ContactStrip from "./components/ContactStrip";
 import Services from "./components/Services";
 import Booking from "./pages/Booking";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 
@@ -16,6 +17,7 @@ function Home() {
       <HomeServices />
       <BookAppointment />
       <ContactStrip />
+  
     </>
   );
 }
@@ -30,6 +32,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/booking" element={<Booking />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
 
