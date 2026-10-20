@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import hero1 from "../assets/hero/hero-1.jpg";
@@ -33,9 +34,9 @@ function Hero() {
           good, feel beautiful and leave feeling confident.
         </p>
 
-        <a href="#booking" className="book-btn">
-          Book Now
-        </a>
+        <Link to="/booking" className="book-btn">
+  Book Now
+</Link>
       </div>
 
       <div className="hero-image">
