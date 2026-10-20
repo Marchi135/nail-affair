@@ -1,3 +1,4 @@
+
 {
   "name": "nail-affair",
   "private": true,
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "react": "^19.2.8",
