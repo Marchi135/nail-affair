@@ -2139,7 +2139,7 @@ h2 {
     width: 100%;
     max-width: 100%;
     flex: none;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
