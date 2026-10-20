@@ -2202,3 +2202,30 @@ h2 {
     line-height: 1.6;
   }
 }
+/* COMPACT MOBILE BOOKING PAGE */
+
+.booking-page {
+  padding: 30px 4%;
+}
+
+.booking-heading {
+  margin-bottom: 22px;
+}
+
+.booking-progress {
+  gap: 10px;
+  margin: 20px auto 28px;
+}
+
+.booking-progress span {
+  padding: 9px 12px;
+  font-size: 12px;
+}
+
+.booking-step-heading {
+  margin-bottom: 22px;
+}
+
+.booking-service-item {
+  padding: 14px 12px;
+}
