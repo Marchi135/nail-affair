@@ -2229,3 +2229,153 @@ h2 {
 .booking-service-item {
   padding: 14px 12px;
 }
+
+/* =====================================
+   NAIL AFFAIR HAMBURGER NAVIGATION
+===================================== */
+
+/* DESKTOP */
+.hamburger {
+  display: none;
+}
+
+.mobile-book-btn {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: nowrap;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    color: #b8860b;
+
+    font-size: 30px;
+    cursor: pointer;
+
+    padding: 8px;
+    margin-left: auto;
+  }
+
+  /* HIDE LINKS BY DEFAULT */
+  .navbar .nav-links {
+    display: none;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background: #fffaf7;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    padding: 25px 20px;
+
+    border-top: 1px solid #eadbd5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    z-index: 1000;
+  }
+
+  /* SHOW LINKS WHEN MENU IS OPEN */
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .navbar .nav-links a:hover {
+    color: #b8860b;
+  }
+
+  /* HIDE DESKTOP BOOK NOW */
+  .navbar > .book-btn {
+    display: none;
+  }
+
+  /* SHOW MOBILE BOOK NOW */
+  .navbar .nav-links .mobile-book-btn {
+    display: block;
+
+    background: #d4af37;
+    color: #222;
+
+    padding: 12px 28px;
+    border-radius: 30px;
+
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+/* =====================================
+   NAIL AFFAIR INTERACTIVE FOOTER
+===================================== */
+
+.footer-content > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-content a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #d4af37;
+  transform: translateX(5px);
+}
+
+.footer-content a:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+/* MOBILE FOOTER */
+@media (max-width: 768px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-content > div {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-content a {
+    padding: 4px 0;
+  }
+}
